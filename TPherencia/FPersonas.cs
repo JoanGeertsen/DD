@@ -8,7 +8,8 @@ namespace TPherencia
         #region Atributos
         private Persona[] aPersonas;
         private Estudiante[] aEstudiantes;
-        private int max;
+        private int maxEstudiantes;
+        private int maxPersonas;
         private int cantPersonas;
         private int cantEstudiantes;
         #endregion
@@ -16,10 +17,11 @@ namespace TPherencia
         public FPersonas()
         {
             InitializeComponent();
-            max = 50;
-            aPersonas = new Persona[max];
+            maxEstudiantes = 1;
+            maxPersonas = 1;
+            aPersonas = new Persona[maxPersonas];
             cantPersonas = 0;
-            aEstudiantes = new Estudiante[max];
+            aEstudiantes = new Estudiante[maxEstudiantes];
             cantEstudiantes = 0;
         }
 
@@ -63,14 +65,14 @@ namespace TPherencia
                     aPersonas[i].Nombre = tNombre.Text; aPersonas[i].Apellido = tApellido.Text;
                     aPersonas[i].FechaNacimiento = dtFechaNacimiento.Text;
                     MessageBox.Show(aPersonas[i].mostrar(), "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                limpiarCampos();
+                }                
             }
             else//Creo persona 
             {
                 aPersonas[cantPersonas++] = new Persona(mtDni.Text, tNombre.Text, tApellido.Text, dtFechaNacimiento.Text);
                 MessageBox.Show(aPersonas[cantPersonas - 1].mostrar(), "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            limpiarCampos();
         }
 
         private void actualizarOcrearEstudiante()
@@ -87,16 +89,14 @@ namespace TPherencia
                     aEstudiantes[i].Legajo = mtLegajo.Text; aEstudiantes[i].Carrera = tCarrera.Text;
                     aEstudiantes[i].FechaNacimiento = dtFechaIngreso.Text;
                     MessageBox.Show(aEstudiantes[i].mostrar(), "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                limpiarCampos();
+                }                
             }
             else//Creo Estudiante 
             {
                 aEstudiantes[cantEstudiantes++] = new Estudiante(mtDni.Text, tNombre.Text, tApellido.Text, dtFechaNacimiento.Text, mtLegajo.Text, tCarrera.Text, dtFechaIngreso.Text);
                 MessageBox.Show(aEstudiantes[cantEstudiantes - 1].mostrar(), "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
-
+            limpiarCampos();
         }
 
         private void actualizarListBoxConArreglo(Persona[] a, int tope)
@@ -132,7 +132,9 @@ namespace TPherencia
             mtLegajo.Clear(); tCarrera.Clear(); dtFechaIngreso.Text = "1/1/2020";
         }
         private void bGuardar_Click(object sender, EventArgs e)
-        {
+        { 
+            if (cantEstudiantes >= maxEstudiantes || cantPersonas >= maxPersonas) redimensionarArreglo();
+
             if (!mtDni.MaskCompleted)
             {
                 MessageBox.Show("Debe ingresar un documento VALIDO", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -159,8 +161,30 @@ namespace TPherencia
             actualizarListBox();
         }
 
-        private void bBuscar_Click(object sender, EventArgs e)
+        public void redimensionarArreglo()
         {
+            if (cantEstudiantes >= maxEstudiantes)
+            {
+                maxEstudiantes = maxEstudiantes * 2;
+                Estudiante[] aAux = new Estudiante[maxEstudiantes];
+                for (int i = 0; i < cantEstudiantes; i++)
+                    aAux[i] = aEstudiantes[i];
+                aEstudiantes = aAux;
+            }
+            else
+            {
+                maxPersonas = maxPersonas * 2;  
+                Persona[] aAux = new Persona[maxPersonas];  
+                for (int i = 0; i < cantPersonas; i++)
+                    aAux[i] = aPersonas[i];
+                aPersonas = aAux;
+            }
+        }
+
+
+        private void bBuscar_Click(object sender, EventArgs e)
+        {           
+
             if (!mtDni.MaskCompleted)
             {
                 errorProvider.Clear();
