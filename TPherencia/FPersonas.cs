@@ -17,8 +17,8 @@ namespace TPherencia
         public FPersonas()
         {
             InitializeComponent();
-            maxEstudiantes = 1;
-            maxPersonas = 1;
+            maxEstudiantes = 50;
+            maxPersonas = 50;
             aPersonas = new Persona[maxPersonas];
             cantPersonas = 0;
             aEstudiantes = new Estudiante[maxEstudiantes];
@@ -53,6 +53,17 @@ namespace TPherencia
         {
             return MessageBox.Show($"Se encontró:\n\n{p.mostrar()}\n\n¿Desea actualizarlo?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
         }
+
+        private void insertarOrdenado(Persona[] arreglo, int i, Persona p)
+        { 
+            i--;           
+            while (i >= 0 && int.Parse(p.Documento.Replace(".","")) < int.Parse(arreglo[i].Documento.Replace(".","")))
+            {                
+                arreglo[i + 1] = arreglo[i];
+                i--;
+            }
+            arreglo[i + 1] = p; 
+        }
         private void actualizarOcrearPersona()
         {
             Persona p = new Persona(mtDni.Text);
@@ -68,9 +79,10 @@ namespace TPherencia
                 }                
             }
             else//Creo persona 
-            {
-                aPersonas[cantPersonas++] = new Persona(mtDni.Text, tNombre.Text, tApellido.Text, dtFechaNacimiento.Text);
-                MessageBox.Show(aPersonas[cantPersonas - 1].mostrar(), "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            {             
+                Persona aux= new Persona(mtDni.Text, tNombre.Text, tApellido.Text, dtFechaNacimiento.Text);
+                insertarOrdenado(aPersonas,cantPersonas++, aux);
+                MessageBox.Show(aPersonas[cantPersonas - 1].mostrar(), "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);               
             }
             limpiarCampos();
         }
@@ -93,7 +105,8 @@ namespace TPherencia
             }
             else//Creo Estudiante 
             {
-                aEstudiantes[cantEstudiantes++] = new Estudiante(mtDni.Text, tNombre.Text, tApellido.Text, dtFechaNacimiento.Text, mtLegajo.Text, tCarrera.Text, dtFechaIngreso.Text);
+                Estudiante aux = new Estudiante(mtDni.Text, tNombre.Text, tApellido.Text, dtFechaNacimiento.Text, mtLegajo.Text, tCarrera.Text, dtFechaIngreso.Text);
+                insertarOrdenado(aEstudiantes, cantEstudiantes++, aux);
                 MessageBox.Show(aEstudiantes[cantEstudiantes - 1].mostrar(), "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             limpiarCampos();
