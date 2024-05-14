@@ -208,19 +208,17 @@ namespace TPherencia
 
         private void bBuscar_Click(object sender, EventArgs e)
         {
-
-            if (!mtDni.MaskCompleted)
-            {
-                errorProvider.Clear();
-                MessageBox.Show("Debe ingresar un documento VALIDO", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                errorProvider.SetError(mtDni, "Documento invalido"); mtDni.Focus();
-            }
-
-            else if (chEstudiante.Checked && (!mtLegajo.MaskCompleted))
+            if (chEstudiante.Checked && (!mtLegajo.MaskCompleted))
             {
                 errorProvider.Clear();
                 MessageBox.Show("Debe ingresar un legajo VALIDO", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 errorProvider.SetError(mtLegajo, "Legajo invalido"); mtLegajo.Focus();
+            }
+            else if (!chEstudiante.Checked && !mtDni.MaskCompleted)
+            {
+                errorProvider.Clear();
+                MessageBox.Show("Debe ingresar un documento VALIDO", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                errorProvider.SetError(mtDni, "Documento invalido"); mtDni.Focus();
             }
             else if (!chEstudiante.Checked)//Busco una persona
             {
