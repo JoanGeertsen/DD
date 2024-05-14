@@ -194,6 +194,12 @@ namespace TPherencia
             }
         }
 
+        private void mostrarCamposEstudiante(Estudiante e)
+        {
+            tNombre.Text = e.Nombre; tApellido.Text = e.Apellido; mtDni.Text = e.Documento; dtFechaIngreso.Text = e.FechaDeIngreso;
+            mtLegajo.Text = e.Legajo; tCarrera.Text=e.Carrera; dtFechaIngreso.Text=e.FechaDeIngreso;
+        }
+
 
         private void bBuscar_Click(object sender, EventArgs e)
         {
@@ -205,7 +211,7 @@ namespace TPherencia
                 errorProvider.SetError(mtDni, "Documento invalido"); mtDni.Focus();
             }
 
-            else if (chEstudiante.Checked && !mtLegajo.MaskCompleted)
+            else if (chEstudiante.Checked && (!mtLegajo.MaskCompleted))
             {
                 errorProvider.Clear();
                 MessageBox.Show("Debe ingresar un legajo VALIDO", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -226,7 +232,7 @@ namespace TPherencia
                 int i = 0;
                 while (i < cantEstudiantes && !aEstudiantes[i].esIgual(aux))
                     i++;
-                if (i < cantEstudiantes && cantEstudiantes > 0) MessageBox.Show($"Se encontró:\n\n{aEstudiantes[i].mostrar()}", "Búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (i < cantEstudiantes && cantEstudiantes > 0) mostrarCamposEstudiante(aEstudiantes[i]);
                 else MessageBox.Show($"No se encontraron resultados", "Búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
