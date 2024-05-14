@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\joang\\source\\repos\\TPherencia\\TPherencia\\DD TP3 ej1.csproj",
+      "projectUniqueName": "C:\\Users\\joang\\Desktop\\DD TP3 ej1\\DD-TP3-ej1\\TPherencia\\DD TP3 ej1.csproj",
       "projectName": "DD TP3 ej1",
-      "projectPath": "C:\\Users\\joang\\source\\repos\\TPherencia\\TPherencia\\DD TP3 ej1.csproj",
+      "projectPath": "C:\\Users\\joang\\Desktop\\DD TP3 ej1\\DD-TP3-ej1\\TPherencia\\DD TP3 ej1.csproj",
       "packagesPath": "C:\\Users\\joang\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\joang\\source\\repos\\TPherencia\\TPherencia\\obj\\",
+      "outputPath": "C:\\Users\\joang\\Desktop\\DD TP3 ej1\\DD-TP3-ej1\\TPherencia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\joang\\AppData\\Roaming\\NuGet\\NuGet.Config",

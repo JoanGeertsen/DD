@@ -55,14 +55,14 @@ namespace TPherencia
         }
 
         private void insertarOrdenado(Persona[] arreglo, int i, Persona p)
-        { 
-            i--;           
-            while (i >= 0 && int.Parse(p.Documento.Replace(".","")) < int.Parse(arreglo[i].Documento.Replace(".","")))
-            {                
+        {
+            i--;
+            while (i >= 0 && int.Parse(p.Documento.Replace(".", "")) < int.Parse(arreglo[i].Documento.Replace(".", "")))
+            {
                 arreglo[i + 1] = arreglo[i];
                 i--;
             }
-            arreglo[i + 1] = p; 
+            arreglo[i + 1] = p;
         }
         private void actualizarOcrearPersona()
         {
@@ -76,13 +76,13 @@ namespace TPherencia
                     aPersonas[i].Nombre = tNombre.Text; aPersonas[i].Apellido = tApellido.Text;
                     aPersonas[i].FechaNacimiento = dtFechaNacimiento.Text;
                     MessageBox.Show(aPersonas[i].mostrar(), "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }                
+                }
             }
             else//Creo persona 
-            {             
-                Persona aux= new Persona(mtDni.Text, tNombre.Text, tApellido.Text, dtFechaNacimiento.Text);
-                insertarOrdenado(aPersonas,cantPersonas++, aux);
-                MessageBox.Show(aPersonas[cantPersonas - 1].mostrar(), "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);               
+            {
+                Persona aux = new Persona(mtDni.Text, tNombre.Text, tApellido.Text, dtFechaNacimiento.Text);
+                insertarOrdenado(aPersonas, cantPersonas++, aux);
+                MessageBox.Show(aPersonas[cantPersonas - 1].mostrar(), "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             limpiarCampos();
         }
@@ -101,7 +101,7 @@ namespace TPherencia
                     aEstudiantes[i].Legajo = mtLegajo.Text; aEstudiantes[i].Carrera = tCarrera.Text;
                     aEstudiantes[i].FechaNacimiento = dtFechaIngreso.Text;
                     MessageBox.Show(aEstudiantes[i].mostrar(), "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }                
+                }
             }
             else//Creo Estudiante 
             {
@@ -141,11 +141,11 @@ namespace TPherencia
         }
         private void limpiarCampos()
         {
-            tNombre.Clear();tApellido.Clear();mtDni.Clear(); dtFechaNacimiento.Text = "1/1/2000";
+            tNombre.Clear(); tApellido.Clear(); mtDni.Clear(); dtFechaNacimiento.Text = "1/1/2000";
             mtLegajo.Clear(); tCarrera.Clear(); dtFechaIngreso.Text = "1/1/2020";
         }
         private void bGuardar_Click(object sender, EventArgs e)
-        { 
+        {
             if (cantEstudiantes >= maxEstudiantes || cantPersonas >= maxPersonas) redimensionarArreglo();
 
             if (!mtDni.MaskCompleted)
@@ -161,7 +161,7 @@ namespace TPherencia
             }
             else if (!chEstudiante.Checked) actualizarOcrearPersona();
             else actualizarOcrearEstudiante();
-            
+
             actualizarListBox();
         }
 
@@ -186,8 +186,8 @@ namespace TPherencia
             }
             else
             {
-                maxPersonas = maxPersonas * 2;  
-                Persona[] aAux = new Persona[maxPersonas];  
+                maxPersonas = maxPersonas * 2;
+                Persona[] aAux = new Persona[maxPersonas];
                 for (int i = 0; i < cantPersonas; i++)
                     aAux[i] = aPersonas[i];
                 aPersonas = aAux;
@@ -196,7 +196,7 @@ namespace TPherencia
 
 
         private void bBuscar_Click(object sender, EventArgs e)
-        {           
+        {
 
             if (!mtDni.MaskCompleted)
             {
@@ -215,9 +215,9 @@ namespace TPherencia
             {
                 Persona p = new Persona(mtDni.Text);
                 int i = 0;
-                while(i < cantPersonas && !aPersonas[i].esIgual(p))                
+                while (i < cantPersonas && !aPersonas[i].esIgual(p))
                     i++;
-                if (i < cantPersonas && cantPersonas > 0) MessageBox.Show($"Se encontró:\n\n{aPersonas[i].mostrar()}","Búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (i < cantPersonas && cantPersonas > 0) MessageBox.Show($"Se encontró:\n\n{aPersonas[i].mostrar()}", "Búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else MessageBox.Show($"No se encontraron resultados", "Búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (chEstudiante.Checked) //Busco un estudiante
@@ -323,6 +323,6 @@ namespace TPherencia
                 errorProvider.SetError(dtFechaIngreso, "");
         }
         #endregion
-       
+
     }
 }

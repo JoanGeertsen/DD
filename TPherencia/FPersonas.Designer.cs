@@ -73,17 +73,19 @@
             pPersona.Controls.Add(label3);
             pPersona.Controls.Add(label2);
             pPersona.Controls.Add(label1);
-            pPersona.Location = new Point(12, 12);
+            pPersona.Location = new Point(17, 20);
+            pPersona.Margin = new Padding(4, 5, 4, 5);
             pPersona.Name = "pPersona";
-            pPersona.Size = new Size(307, 147);
+            pPersona.Size = new Size(439, 245);
             pPersona.TabIndex = 0;
             // 
             // chEstudiante
             // 
             chEstudiante.AutoSize = true;
-            chEstudiante.Location = new Point(92, 121);
+            chEstudiante.Location = new Point(131, 202);
+            chEstudiante.Margin = new Padding(4, 5, 4, 5);
             chEstudiante.Name = "chEstudiante";
-            chEstudiante.Size = new Size(81, 19);
+            chEstudiante.Size = new Size(120, 29);
             chEstudiante.TabIndex = 9;
             chEstudiante.Text = "Estudiante";
             chEstudiante.UseVisualStyleBackColor = true;
@@ -92,36 +94,40 @@
             // dtFechaNacimiento
             // 
             dtFechaNacimiento.Format = DateTimePickerFormat.Short;
-            dtFechaNacimiento.Location = new Point(92, 92);
+            dtFechaNacimiento.Location = new Point(131, 153);
+            dtFechaNacimiento.Margin = new Padding(4, 5, 4, 5);
             dtFechaNacimiento.Name = "dtFechaNacimiento";
-            dtFechaNacimiento.Size = new Size(97, 23);
+            dtFechaNacimiento.Size = new Size(137, 31);
             dtFechaNacimiento.TabIndex = 8;
             dtFechaNacimiento.Value = new DateTime(2000, 1, 1, 0, 0, 0, 0);
             dtFechaNacimiento.Leave += dtFechaNacimiento_Leave;
             // 
             // mtDni
             // 
-            mtDni.Location = new Point(92, 63);
+            mtDni.Location = new Point(131, 105);
+            mtDni.Margin = new Padding(4, 5, 4, 5);
             mtDni.Mask = "00,000,000";
             mtDni.Name = "mtDni";
-            mtDni.Size = new Size(197, 23);
+            mtDni.Size = new Size(280, 31);
             mtDni.TabIndex = 7;
             mtDni.Leave += mtDni_Leave;
             // 
             // tApellido
             // 
-            tApellido.Location = new Point(92, 35);
+            tApellido.Location = new Point(131, 58);
+            tApellido.Margin = new Padding(4, 5, 4, 5);
             tApellido.Name = "tApellido";
-            tApellido.Size = new Size(197, 23);
+            tApellido.Size = new Size(280, 31);
             tApellido.TabIndex = 6;
             tApellido.KeyPress += tApellido_KeyPress;
             tApellido.Leave += tApellido_Leave;
             // 
             // tNombre
             // 
-            tNombre.Location = new Point(92, 6);
+            tNombre.Location = new Point(131, 10);
+            tNombre.Margin = new Padding(4, 5, 4, 5);
             tNombre.Name = "tNombre";
-            tNombre.Size = new Size(197, 23);
+            tNombre.Size = new Size(280, 31);
             tNombre.TabIndex = 5;
             tNombre.KeyPress += tNombre_KeyPress;
             tNombre.Leave += tNombre_Leave;
@@ -129,36 +135,40 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(13, 100);
+            label4.Location = new Point(19, 167);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(68, 15);
+            label4.Size = new Size(100, 25);
             label4.TabIndex = 4;
             label4.Text = "Fecha Nac.:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(13, 66);
+            label3.Location = new Point(19, 110);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(73, 15);
+            label3.Size = new Size(110, 25);
             label3.TabIndex = 3;
             label3.Text = "Documento:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(13, 37);
+            label2.Location = new Point(19, 62);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(54, 15);
+            label2.Size = new Size(82, 25);
             label2.TabIndex = 2;
             label2.Text = "Apellido:";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(13, 9);
+            label1.Location = new Point(19, 15);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(54, 15);
+            label1.Size = new Size(82, 25);
             label1.TabIndex = 1;
             label1.Text = "Nombre:";
             // 
@@ -169,38 +179,42 @@
             pLista.Controls.Add(lbPersonas);
             pLista.Controls.Add(cbFiltros);
             pLista.Controls.Add(label5);
-            pLista.Location = new Point(325, 12);
+            pLista.Location = new Point(464, 20);
+            pLista.Margin = new Padding(4, 5, 4, 5);
             pLista.Name = "pLista";
-            pLista.Size = new Size(194, 255);
+            pLista.Size = new Size(277, 425);
             pLista.TabIndex = 10;
             // 
             // lCantidad
             // 
             lCantidad.AutoSize = true;
-            lCantidad.Location = new Point(12, 231);
+            lCantidad.Location = new Point(17, 385);
+            lCantidad.Margin = new Padding(4, 0, 4, 0);
             lCantidad.Name = "lCantidad";
-            lCantidad.Size = new Size(58, 15);
+            lCantidad.Size = new Size(87, 25);
             lCantidad.TabIndex = 13;
             lCantidad.Text = "Cantidad:";
             // 
             // lbPersonas
             // 
             lbPersonas.FormattingEnabled = true;
-            lbPersonas.HorizontalExtent = 450;
+            lbPersonas.HorizontalExtent = 700;
             lbPersonas.HorizontalScrollbar = true;
-            lbPersonas.ItemHeight = 15;
-            lbPersonas.Location = new Point(12, 53);
+            lbPersonas.ItemHeight = 25;
+            lbPersonas.Location = new Point(17, 88);
+            lbPersonas.Margin = new Padding(4, 5, 4, 5);
             lbPersonas.Name = "lbPersonas";
-            lbPersonas.Size = new Size(170, 169);
+            lbPersonas.Size = new Size(241, 279);
             lbPersonas.TabIndex = 12;
             // 
             // cbFiltros
             // 
             cbFiltros.FormattingEnabled = true;
             cbFiltros.Items.AddRange(new object[] { "TODOS", "Estudiantes", "NO Estudiantes" });
-            cbFiltros.Location = new Point(12, 24);
+            cbFiltros.Location = new Point(17, 40);
+            cbFiltros.Margin = new Padding(4, 5, 4, 5);
             cbFiltros.Name = "cbFiltros";
-            cbFiltros.Size = new Size(170, 23);
+            cbFiltros.Size = new Size(241, 33);
             cbFiltros.TabIndex = 11;
             cbFiltros.Text = "TODOS";
             cbFiltros.SelectedIndexChanged += cbFiltros_SelectedIndexChanged;
@@ -209,9 +223,10 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(12, 6);
+            label5.Location = new Point(17, 10);
+            label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(37, 15);
+            label5.Size = new Size(56, 25);
             label5.TabIndex = 10;
             label5.Text = "Filtro:";
             // 
@@ -224,36 +239,40 @@
             pEstudiante.Controls.Add(label7);
             pEstudiante.Controls.Add(mtLegajo);
             pEstudiante.Controls.Add(label6);
-            pEstudiante.Location = new Point(12, 165);
+            pEstudiante.Location = new Point(17, 275);
+            pEstudiante.Margin = new Padding(4, 5, 4, 5);
             pEstudiante.Name = "pEstudiante";
-            pEstudiante.Size = new Size(307, 102);
+            pEstudiante.Size = new Size(439, 170);
             pEstudiante.TabIndex = 13;
             pEstudiante.Visible = false;
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(13, 75);
+            label8.Location = new Point(19, 125);
+            label8.Margin = new Padding(4, 0, 4, 0);
             label8.Name = "label8";
-            label8.Size = new Size(83, 15);
+            label8.Size = new Size(126, 25);
             label8.TabIndex = 12;
             label8.Text = "Fecha Ingreso:";
             // 
             // dtFechaIngreso
             // 
             dtFechaIngreso.Format = DateTimePickerFormat.Short;
-            dtFechaIngreso.Location = new Point(98, 70);
+            dtFechaIngreso.Location = new Point(140, 117);
+            dtFechaIngreso.Margin = new Padding(4, 5, 4, 5);
             dtFechaIngreso.Name = "dtFechaIngreso";
-            dtFechaIngreso.Size = new Size(97, 23);
+            dtFechaIngreso.Size = new Size(137, 31);
             dtFechaIngreso.TabIndex = 10;
             dtFechaIngreso.Value = new DateTime(2020, 1, 1, 0, 0, 0, 0);
             dtFechaIngreso.Leave += dtFechaIngreso_Leave;
             // 
             // tCarrera
             // 
-            tCarrera.Location = new Point(98, 41);
+            tCarrera.Location = new Point(140, 68);
+            tCarrera.Margin = new Padding(4, 5, 4, 5);
             tCarrera.Name = "tCarrera";
-            tCarrera.Size = new Size(181, 23);
+            tCarrera.Size = new Size(257, 31);
             tCarrera.TabIndex = 10;
             tCarrera.KeyPress += tCarrera_KeyPress;
             tCarrera.Leave += tCarrera_Leave;
@@ -261,35 +280,39 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(44, 49);
+            label7.Location = new Point(63, 82);
+            label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
-            label7.Size = new Size(48, 15);
+            label7.Size = new Size(72, 25);
             label7.TabIndex = 11;
             label7.Text = "Carrera:";
             // 
             // mtLegajo
             // 
-            mtLegajo.Location = new Point(98, 8);
+            mtLegajo.Location = new Point(140, 13);
+            mtLegajo.Margin = new Padding(4, 5, 4, 5);
             mtLegajo.Mask = "000000";
             mtLegajo.Name = "mtLegajo";
-            mtLegajo.Size = new Size(81, 23);
+            mtLegajo.Size = new Size(114, 31);
             mtLegajo.TabIndex = 10;
             mtLegajo.Leave += mtLegajo_Leave;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(47, 11);
+            label6.Location = new Point(67, 18);
+            label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
-            label6.Size = new Size(45, 15);
+            label6.Size = new Size(68, 25);
             label6.TabIndex = 10;
             label6.Text = "Legajo:";
             // 
             // bBuscar
             // 
-            bBuscar.Location = new Point(12, 273);
+            bBuscar.Location = new Point(17, 455);
+            bBuscar.Margin = new Padding(4, 5, 4, 5);
             bBuscar.Name = "bBuscar";
-            bBuscar.Size = new Size(75, 23);
+            bBuscar.Size = new Size(107, 38);
             bBuscar.TabIndex = 14;
             bBuscar.Text = "Buscar";
             bBuscar.UseVisualStyleBackColor = true;
@@ -297,9 +320,10 @@
             // 
             // bGuardar
             // 
-            bGuardar.Location = new Point(216, 273);
+            bGuardar.Location = new Point(309, 455);
+            bGuardar.Margin = new Padding(4, 5, 4, 5);
             bGuardar.Name = "bGuardar";
-            bGuardar.Size = new Size(75, 23);
+            bGuardar.Size = new Size(107, 38);
             bGuardar.TabIndex = 15;
             bGuardar.Text = "Guardar";
             bGuardar.UseVisualStyleBackColor = true;
@@ -307,9 +331,10 @@
             // 
             // bCancelar
             // 
-            bCancelar.Location = new Point(444, 273);
+            bCancelar.Location = new Point(634, 455);
+            bCancelar.Margin = new Padding(4, 5, 4, 5);
             bCancelar.Name = "bCancelar";
-            bCancelar.Size = new Size(75, 23);
+            bCancelar.Size = new Size(107, 38);
             bCancelar.TabIndex = 16;
             bCancelar.Text = "Cancelar";
             bCancelar.UseVisualStyleBackColor = true;
@@ -321,15 +346,16 @@
             // 
             // FPersonas
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(534, 304);
+            ClientSize = new Size(763, 507);
             Controls.Add(bCancelar);
             Controls.Add(bGuardar);
             Controls.Add(bBuscar);
             Controls.Add(pEstudiante);
             Controls.Add(pLista);
             Controls.Add(pPersona);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "FPersonas";
             Text = "Personas";
             pPersona.ResumeLayout(false);

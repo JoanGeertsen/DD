@@ -14,3 +14,19 @@ C:\Users\joang\source\repos\TPherencia\TPherencia\obj\Debug\net6.0-windows\refin
 C:\Users\joang\source\repos\TPherencia\TPherencia\obj\Debug\net6.0-windows\DD TP3 ej1.pdb
 C:\Users\joang\source\repos\TPherencia\TPherencia\obj\Debug\net6.0-windows\DD TP3 ej1.genruntimeconfig.cache
 C:\Users\joang\source\repos\TPherencia\TPherencia\obj\Debug\net6.0-windows\ref\DD TP3 ej1.dll
+C:\Users\joang\Desktop\DD TP3 ej1\DD-TP3-ej1\TPherencia\bin\Debug\net6.0-windows\DD TP3 ej1.exe
+C:\Users\joang\Desktop\DD TP3 ej1\DD-TP3-ej1\TPherencia\bin\Debug\net6.0-windows\DD TP3 ej1.deps.json
+C:\Users\joang\Desktop\DD TP3 ej1\DD-TP3-ej1\TPherencia\bin\Debug\net6.0-windows\DD TP3 ej1.runtimeconfig.json
+C:\Users\joang\Desktop\DD TP3 ej1\DD-TP3-ej1\TPherencia\bin\Debug\net6.0-windows\DD TP3 ej1.dll
+C:\Users\joang\Desktop\DD TP3 ej1\DD-TP3-ej1\TPherencia\bin\Debug\net6.0-windows\DD TP3 ej1.pdb
+C:\Users\joang\Desktop\DD TP3 ej1\DD-TP3-ej1\TPherencia\obj\Debug\net6.0-windows\TPherencia.FPersonas.resources
+C:\Users\joang\Desktop\DD TP3 ej1\DD-TP3-ej1\TPherencia\obj\Debug\net6.0-windows\DD TP3 ej1.csproj.GenerateResource.cache
+C:\Users\joang\Desktop\DD TP3 ej1\DD-TP3-ej1\TPherencia\obj\Debug\net6.0-windows\DD TP3 ej1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joang\Desktop\DD TP3 ej1\DD-TP3-ej1\TPherencia\obj\Debug\net6.0-windows\DD TP3 ej1.AssemblyInfoInputs.cache
+C:\Users\joang\Desktop\DD TP3 ej1\DD-TP3-ej1\TPherencia\obj\Debug\net6.0-windows\DD TP3 ej1.AssemblyInfo.cs
+C:\Users\joang\Desktop\DD TP3 ej1\DD-TP3-ej1\TPherencia\obj\Debug\net6.0-windows\DD TP3 ej1.csproj.CoreCompileInputs.cache
+C:\Users\joang\Desktop\DD TP3 ej1\DD-TP3-ej1\TPherencia\obj\Debug\net6.0-windows\DD TP3 ej1.dll
+C:\Users\joang\Desktop\DD TP3 ej1\DD-TP3-ej1\TPherencia\obj\Debug\net6.0-windows\refint\DD TP3 ej1.dll
+C:\Users\joang\Desktop\DD TP3 ej1\DD-TP3-ej1\TPherencia\obj\Debug\net6.0-windows\DD TP3 ej1.pdb
+C:\Users\joang\Desktop\DD TP3 ej1\DD-TP3-ej1\TPherencia\obj\Debug\net6.0-windows\DD TP3 ej1.genruntimeconfig.cache
+C:\Users\joang\Desktop\DD TP3 ej1\DD-TP3-ej1\TPherencia\obj\Debug\net6.0-windows\ref\DD TP3 ej1.dll
