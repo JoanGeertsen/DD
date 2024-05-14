@@ -59,7 +59,7 @@ namespace DD_TP3_ej1
 
         public bool esIgual(Estudiante e)
         {
-            return legajo.Equals(e.Legajo) && base.esIgual(e);
+            return legajo.Equals(e.Legajo) || base.esIgual(e);
         }
         #endregion
     }

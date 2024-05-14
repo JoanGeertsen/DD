@@ -194,9 +194,14 @@ namespace TPherencia
             }
         }
 
+        private void mostrarCamposPersona(Persona p)
+        {
+            tNombre.Text = p.Nombre; tApellido.Text = p.Apellido; mtDni.Text = p.Documento; dtFechaNacimiento.Text = p.FechaNacimiento;
+        }
+
         private void mostrarCamposEstudiante(Estudiante e)
         {
-            tNombre.Text = e.Nombre; tApellido.Text = e.Apellido; mtDni.Text = e.Documento; dtFechaIngreso.Text = e.FechaDeIngreso;
+            mostrarCamposPersona(e);
             mtLegajo.Text = e.Legajo; tCarrera.Text=e.Carrera; dtFechaIngreso.Text=e.FechaDeIngreso;
         }
 
@@ -223,7 +228,7 @@ namespace TPherencia
                 int i = 0;
                 while (i < cantPersonas && !aPersonas[i].esIgual(p))
                     i++;
-                if (i < cantPersonas && cantPersonas > 0) MessageBox.Show($"Se encontró:\n\n{aPersonas[i].mostrar()}", "Búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (i < cantPersonas && cantPersonas > 0) mostrarCamposPersona(aPersonas[i]);
                 else MessageBox.Show($"No se encontraron resultados", "Búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (chEstudiante.Checked) //Busco un estudiante
