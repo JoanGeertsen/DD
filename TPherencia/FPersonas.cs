@@ -26,13 +26,12 @@ namespace TPherencia
         }
 
         #region Funcionalidades
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void chEstudiante_CheckedChanged(object sender, EventArgs e)
         {
             if (chEstudiante.Checked)
                 pEstudiante.Visible = true;
             else pEstudiante.Visible = false;
         }
-
         private bool existePersona(Persona p)
         {
             int i = 0;
@@ -202,7 +201,7 @@ namespace TPherencia
         private void mostrarCamposEstudiante(Estudiante e)
         {
             mostrarCamposPersona(e);
-            mtLegajo.Text = e.Legajo; tCarrera.Text=e.Carrera; dtFechaIngreso.Text=e.FechaDeIngreso;
+            mtLegajo.Text = e.Legajo; tCarrera.Text = e.Carrera; dtFechaIngreso.Text = e.FechaDeIngreso;
         }
 
 
@@ -333,5 +332,6 @@ namespace TPherencia
         }
         #endregion
 
+     
     }
 }

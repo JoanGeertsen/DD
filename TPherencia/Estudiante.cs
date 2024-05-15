@@ -52,7 +52,7 @@ namespace DD_TP3_ej1
         #endregion
 
         #region Consultas
-        public string mostrar()
+        public override string mostrar()
         {
             return base.mostrar() + $"\n Legajo: {legajo} \n{carrera}\n Fecha de ingreso: {fechaDeIngreso}";
         }

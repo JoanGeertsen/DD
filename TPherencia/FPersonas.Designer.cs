@@ -89,7 +89,7 @@
             chEstudiante.TabIndex = 9;
             chEstudiante.Text = "Estudiante";
             chEstudiante.UseVisualStyleBackColor = true;
-            chEstudiante.CheckedChanged += checkBox1_CheckedChanged;
+            chEstudiante.CheckedChanged += chEstudiante_CheckedChanged;
             // 
             // dtFechaNacimiento
             // 
@@ -259,7 +259,7 @@
             // dtFechaIngreso
             // 
             dtFechaIngreso.Format = DateTimePickerFormat.Short;
-            dtFechaIngreso.Location = new Point(140, 117);
+            dtFechaIngreso.Location = new Point(146, 117);
             dtFechaIngreso.Margin = new Padding(4, 5, 4, 5);
             dtFechaIngreso.Name = "dtFechaIngreso";
             dtFechaIngreso.Size = new Size(137, 31);
